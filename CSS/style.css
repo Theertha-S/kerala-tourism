@@ -1,0 +1,167 @@
+@import url('https://fonts.googleapis.com/css2?family=Poiret+One&family=Quicksand:wght@300&display=swap');
+
+.parallax {
+    background-image: url(../Pictures/parallax.jpg );
+    
+  
+    height: 100%; 
+  
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
+
+.parallax2{
+    background-image: url(../Pictures/parallax2.jpg );
+    min-height: 500px; 
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+  
+}
+.parallaxn{
+    background-image: url(../Pictures/zn.jpg );
+    min-height: 200px; 
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+  
+}
+
+.explorekerala{
+    text-align: center;
+    /* font-family: 'Poiret One', cursive; */
+    font-weight: bolder;
+    font-size: 50px;
+    text-shadow: rgb(159, 223, 163) ;
+    color:black;
+   
+
+}
+
+.marginn{
+    
+    margin-left: 20px;
+    margin-right: 20px;
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+
+
+.fa {
+    padding: 20px;
+    font-size: 30px;
+    width: 50px;
+    text-align: center;
+    text-decoration: none;
+    margin: 5px 2px;
+  }
+  
+.fa:hover {
+      opacity: 0.7;
+  }
+  
+.fa-facebook {
+    background: #3B5998;
+    color: white;
+  }
+  
+.fa-twitter {
+    background: #55ACEE;
+    color: white;
+  }
+
+  
+.fa-youtube {
+    background: #bb0000;
+    color: white;
+  }
+  
+.fa-instagram {
+    background: #125688;
+    color: white;
+}
+
+.homeHead{
+    text-align: center;
+    text-transform: uppercase;
+    text-shadow: 1px 1px 10px rgb(195, 224, 196);
+}
+.homeHead2{
+    text-align: center;
+    text-shadow: 1px 1px 10px rgb(195, 224, 196);
+}
+.places{
+    padding: 15px;
+    border-radius: 5px;
+    box-shadow: 2px 2px 2px 2px rgb(195, 224, 196);
+}
+
+.distName{
+    top: 5px;
+    font-family: 'Poiret One', cursive;
+    text-transform: uppercase;
+    /* font-family: 'Quicksand', sans-serif; */
+    text-align: center;
+    font-weight: bold;
+}
+
+.distDetails{
+    color: rgb(31, 32, 31);
+    padding: 20px;
+    text-align: left;
+    
+
+}
+.jumbortonnn{
+    opacity: 80%;
+    font-family: 'Poiret One', cursive;
+    font-weight: bolder;
+    text-decoration: black;
+
+}
+.jumbortonn{
+    
+    font-family: 'Poiret One', cursive;
+    font-weight: bolder;
+    background-color:  rgb(151, 197, 154);
+    text-decoration: black;
+
+}
+
+
+.cardPadding{
+    padding: 40px;
+}
+
+.card-img-top {
+    width: 70%;
+    height: 30vw;
+    object-fit: cover;
+}
+
+.card-img {
+    width: 70%;
+    height: 30vw;
+    object-fit: cover;
+}
+.galleryCard{
+    padding: 14px;
+}
+
+#distt{
+        opacity: 95%;
+        max-width: 100%;
+        height: auto;
+        
+} 
+
+.foot{
+    background-color: white;
+    margin-bottom: 10px;
+}
+
