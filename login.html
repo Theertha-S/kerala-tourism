@@ -90,17 +90,33 @@
  </script>
 <script>
 
-  let email=document.getElementById("email");
-  let pwd=document.getElementById("pwd");
+  flet username=document.getElementById("username");
+    let number=document.getElementById("number");
+    let email=document.getElementById("email");
+    let pwd=document.getElementById("pwd");
+    let pwd2=document.getElementById("pwd2");
+    let exampleCheck1=document.getElementById("exampleCheck1");
+    
+    let error1=document.getElementById("error1");
+    let error2=document.getElementById("error2");
+    let error3=document.getElementById("error3");
+    let error4=document.getElementById("error4");
+    let error6=document.getElementById("check");
+    let flag=0;
+
+    let regexpname= /^([A-Za-z0-9\._]+)$/;
+    let regexpnum1= /^([0-9]{10})$/;
+    let regexpnum2= /^([0-9]{3}) ([0-9]{3}) ([0-9]{4})$/;
+    let regexpnum3= /^([0-9]{3}).([0-9]{3}).([0-9]{4})$/;
+    let regexpnum4= /^([0-9]{3})-([0-9]{3})-([0-9]{4})$/;
   
-  let error1=document.getElementById("error1");
-  let error2=document.getElementById("error2");
-  let flag=0;
-
-  let regexpmail= /^([A-Za-z0-9\.-]+)@([A-Za-z0-9\-]+).([a-z]{2,3})(.[a-z]{2,3})?$/;
-  // let regexppwd= /^([A-Za-z]+)@([A-Za-z0-9\-]+).([a-z]{2,3})(.[a-z]{2,3})?$/;
-  // + one or more
-
+    let regexpemail= /^([A-Za-z0-9\.-]+)@([A-Za-z0-9\-]+).([a-z]{2,3})(.[a-z]{2,3})?$/;
+    let regexppwd= /^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)[a-zA-Z\d]{8,}$/;
+    // + one or more
+    
+    let regexpStrong = /^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)[a-zA-Z\d]{12,}$/;
+    let regexpMedium = /^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)[a-zA-Z\d]{10,}$/;
+    let regexpEnough = /^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)[a-zA-Z\d]{8,}$/;
   
   
   
@@ -124,37 +140,52 @@
     
   }
 
-  function pwdValidation()
-  {
+  function passwordValidation()
+    {
     
-    //var p = document.getElementById('newPassword').value,
-    const errors = [];
-    if (p.length < 8) {
-        errors.push("Your password must be at least 8 characters");
-    }
-    if (p.length > 32) {
-        errors.push("Your password must be at max 32 characters");
-    }
-    if (p.search(/[a-z]/) < 0) {
-        errors.push("Your password must contain at least one lower case letter."); 
-    }
-    if (p.search(/[A-Z]/) < 0) {
-        errors.push("Your password must contain at least one upper case letter."); 
-    }
-
-    if (p.search(/[0-9]/) < 0) {
-        errors.push("Your password must contain at least one digit.");
-    }
-  
-    if (errors.length > 0) {
-        console.log(errors.join("\n"));
+      if(regexppwd.test(pwd.value))
+      {
+        error4.innerHTML="Password format is accepted.";
+        error4.style.color="green";
+        return password2Validation();
+      }
+     else{
+    
+        error4.innerHTML="Password format accepted: Minimum 8 characters, at least one uppercase, and one lower case, must contain at least one number.";
+        error4.style.color="red";
         return false;
-    }
-    return true;
     
-  }
+         } 
+      
+    }
+    function password2Validation(){
+      if (regexpStrong.test(pwd.value)) 
+          {
+            error4.innerHTML="Strong password!";
+            error4.style.color="green";
+            return password3Validation();
+            
+          }
+
+        else if (regexpMedium.test(pwd.value)) 
+          {
+            error4.innerHTML="Medium strength password!";
+            error4.style.color="orange";
+            return password3Validation();
+            
+            
+          }
+        else
+          {
+            error4.innerHTML="Weak password!";
+            error4.style.color="red";
+            return password3Validation();
+            
+            
+          }
+   }
  
-  
+
 </script>
 
 
